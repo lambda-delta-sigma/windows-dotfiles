@@ -1,0 +1,6 @@
+# Destination-only machine configuration
+.config/bash/local.sh
+.config/bash/env.local
+
+# Wallpapers storage folder (not in use yet)
+wallpapers

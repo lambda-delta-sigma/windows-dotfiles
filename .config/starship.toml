@@ -1,0 +1,44 @@
+# To show the actual username, comment out this format and uncomment the next one.
+format = '''[\[](bold red)[${custom.whoami}](bold yellow)[@](bold green)[$hostname](bold blue) [$directory](bold purple)[\]](bold red)$git_branch$git_status$cmd_duration$character '''
+# format = '''[\[](bold red)[$username](bold yellow)[@](bold green)[$hostname](bold blue) [$directory](bold purple)[\]](bold red)$git_branch$git_status$cmd_duration$character '''
+
+[username]
+show_always = true
+format = "$user"
+disabled = false
+
+[custom.whoami]
+command = "echo User"
+when = true
+format = "[$output](bold yellow)"
+
+[hostname]
+ssh_only = false
+format = "$hostname"
+disabled = false
+
+[directory]
+format = "$path"
+truncation_length = 1
+truncate_to_repo = false
+style = ""
+
+[character]
+success_symbol = '[\$](bold white)'
+error_symbol = '[\$](bold red)'
+format = "$symbol "
+
+[git_branch]
+format = "[ $branch](bold cyan)"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+style = "bold red"
+
+[cmd_duration]
+min_time = 3000
+format = "[ took $duration](bold yellow)"
+
+[python]
+format = "[ $version]($style) "
+style = "bold green"

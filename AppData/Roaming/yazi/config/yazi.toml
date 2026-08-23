@@ -1,0 +1,40 @@
+[mgr]
+# Column Ratios
+ratio = [1, 3, 4]
+
+# Sorting Preferences
+sort_by = "natural"
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+
+# display_size_in_main_column
+linemode = "size"
+
+# Hidden Files Visibility
+show_hidden = false
+
+# Scroll offset
+scrolloff = 8
+
+# Show symlink targets where applicable
+show_symlink = true
+
+[preview]
+wrap = "yes"
+
+[opener]
+edit= [
+{ run = '"%EDITOR%" %s1', block = true, desc = "Vim", for = "windows" },
+]
+
+[open]
+prepend_rules = [    
+    { url = "*.md", use = "edit" },
+    { mime = "text/*", use = "edit" },
+    { mime = "application/json", use = "edit" },
+    { mime = "application/javascript", use = "edit" },
+    { mime = "application/xml", use = "edit" },
+]
+
+

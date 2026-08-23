@@ -1,0 +1,9 @@
+* text=auto
+
+# Git for Windows Bash reads these files directly.
+*.sh text eol=lf
+.bashrc text eol=lf
+.bash_profile text eol=lf
+.local/bin/mokuro text eol=lf
+.local/bin/tsukihime text eol=lf
+.local/bin/yt-jp text eol=lf

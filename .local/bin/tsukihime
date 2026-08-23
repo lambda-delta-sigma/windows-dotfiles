@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+env_file="$HOME/.config/bash/env.local"
+if [[ -r "$env_file" ]]; then
+  set -a
+  # shellcheck source=/dev/null
+  source "$env_file"
+  set +a
+fi
+
+firefox=${FIREFOX_EXE:-}
+if [[ -z $firefox ]]; then
+  program_files_win=${ProgramW6432:-${ProgramFiles:-${PROGRAMFILES:-}}}
+  [[ -n $program_files_win ]] || {
+    printf 'tsukihime: Windows Program Files environment is unavailable\n' >&2
+    exit 1
+  }
+  firefox="$(cygpath -u "$program_files_win")/Mozilla Firefox/firefox.exe"
+fi
+[[ -x "$firefox" ]] || {
+  printf 'tsukihime: Firefox is not executable: %s\n' "$firefox" >&2
+  exit 1
+}
+
+"$firefox" \
+  "https://tsukiweb.holofield.fr/" \
+  "https://vndb.org/v7/chars#chars" \
+  "https://forums.fuwanovel.moe/topic/983-tsukihime/" &
+disown
+exit

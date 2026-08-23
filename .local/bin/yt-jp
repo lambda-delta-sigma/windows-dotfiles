@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Requires the Open external links in a container addon for Firefox by Denys H
+# https://addons.mozilla.org/en-US/firefox/addon/open-url-in-container/
+
+env_file="$HOME/.config/bash/env.local"
+if [[ -r "$env_file" ]]; then
+  set -a
+  # shellcheck source=/dev/null
+  source "$env_file"
+  set +a
+fi
+
+firefox=${FIREFOX_EXE:-}
+if [[ -z $firefox ]]; then
+  program_files_win=${ProgramW6432:-${ProgramFiles:-${PROGRAMFILES:-}}}
+  [[ -n $program_files_win ]] || {
+    printf 'yt-jp: Windows Program Files environment is unavailable\n' >&2
+    exit 1
+  }
+  firefox="$(cygpath -u "$program_files_win")/Mozilla Firefox/firefox.exe"
+fi
+
+urlencode() {
+  local LC_ALL=C input=$1 output= character i
+  for ((i = 0; i < ${#input}; i++)); do
+    character=${input:i:1}
+    case $character in
+      [a-zA-Z0-9.~_-]) output+=$character ;;
+      *)
+        printf -v character '%%%02X' "'$character"
+        output+=$character
+        ;;
+    esac
+  done
+  printf '%s' "$output"
+}
+
+container_name=${YT_JP_CONTAINER_NAME:-Google JP}
+container_url="ext+container:name=$(urlencode "$container_name")&url=https%3A%2F%2Fwww.youtube.com%2F"
+
+[[ -x "$firefox" ]] || {
+  printf 'yt-jp: Firefox is not executable: %s\n' "$firefox" >&2
+  exit 1
+}
+
+"$firefox" "$container_url" &
+
+disown
+exit
