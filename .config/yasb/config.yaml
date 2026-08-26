@@ -493,10 +493,46 @@ widgets:
       max_results: 30
       show_icons: true
       icon_size: 32
+      providers:
+        apps:
+          enabled: true
+          prefix: "*"
 
+        calculator:
+          enabled: true
+          prefix: "="
+
+        clipboard_history:
+          enabled: true
+          prefix: "cb"
+
+        file_search:
+          enabled: true
+          prefix: "/"
+
+        settings:
+          enabled: true
+          prefix: "@"
+
+        snippets:
+          enabled: true
+          prefix: ";"
+
+        system_commands:
+          enabled: true
+          prefix: ">"
+
+        web_search:
+          enabled: true
+          prefix: "?"
+
+        window_switcher:
+          enabled: true
+          prefix: "win"
+          
       popup:
-        width: 720
-        height: 480
+        width: 1100
+        height: 700
         blur: true
         round_corners: true
         round_corners_type: "normal"
