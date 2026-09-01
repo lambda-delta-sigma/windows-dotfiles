@@ -63,13 +63,12 @@ aliases or helpers will fail when their dependency is unavailable.
 ### YASB
 
 - I split the top bar into separate left, center, and right bars on every monitor.
-- The left shows Komorebi controls and the active window, the center holds the clock and quick launcher, and the right contains media and system controls.
+- The left shows Komorebi controls and the active window, the center holds the clock and quick launcher, and the right contains media, network, and system controls.
 - `Ctrl+Alt+S` expands the system resource widgets, showing CPU and GPU usage along with the memory usage.
 - `Alt+Space` (bound to `Ctrl+Alt+Space` by AHK) opens up a quick launch menu to open other applications on your device. Note that this replaces the default Windows context menu that shows up on Alt+Space.
 - The Nerd Fonts option in the YASB installation is a requirement.
 
 ## To-Do List
-- Add Wi-Fi/network widget to the top-right bar, so that all Windows taskbar functions are handled.
 - Implement some way to switch between multiple wallpapers.
 - Find some way to make yazi keymaps path independent.
 - Add an overview of yazi keymappings to README

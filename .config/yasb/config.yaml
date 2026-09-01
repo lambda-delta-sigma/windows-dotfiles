@@ -428,6 +428,7 @@ widgets:
       show_unpinned: false
       show_battery: false
       show_volume: false
+      show_network: true
       icon_size: 16
       use_hook: true
       show_in_popup: true
