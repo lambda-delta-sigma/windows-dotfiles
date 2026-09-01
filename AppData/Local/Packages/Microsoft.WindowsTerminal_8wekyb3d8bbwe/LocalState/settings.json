@@ -1,0 +1,201 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "\u001c\u000e"
+            },
+            "id": "User.F13AsEscape",
+            "name": "F13 as Escape"
+        },
+        {
+            "id": "User.SummonScratchpad",
+            "command":
+            {
+                "action": "globalSummon",
+                "desktop": "toCurrent",
+                "monitor": "any",
+                "dropdownDuration": 150,
+                "toggleVisibility": true
+            }
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{8f3e6c4f-0b7d-4f26-9b9f-7a1d6dce9c01}",
+
+    "startOnUserLogin": true,
+
+    "launchMode": "focus",
+
+    "initialCols": 74,
+    "initialRows": 24,
+    "initialPosition": "1560,55",
+    "centerOnLaunch": false,
+
+    "autoHideWindow": true,
+    "snapToGridOnResize": false,
+    "keybindings": 
+    [
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.F13AsEscape",
+            "keys": "f13"
+        },
+        {
+            "id": "User.SummonScratchpad",
+            "keys": "alt+q"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": {},
+        "list": 
+        [
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{35f16d66-c51f-5208-b688-8266177ff499}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{996b4589-fa32-5c18-b7ea-253ecc6b283f}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "closeOnExit": "always",
+                "colorScheme": "Dimidium",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+                "font": 
+                {
+                    "face": "CaskaydiaCove Nerd Font Mono"
+                },
+                "guid": "{6267253f-e732-45f8-a18f-3b5fa12c3b73}",
+                "hidden": false,
+                "name": "Bash",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{5fb123f1-af88-5b5c-8953-d14a8def1978}",
+                "hidden": false,
+                "name": "PowerShell 7",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{8f3e6c4f-0b7d-4f26-9b9f-7a1d6dce9c01}",
+                "name": "Scratchpad",
+                "commandline": "\"C:\\Program Files\\Git\\bin\\bash.exe\" -l",
+                "startingDirectory": "%USERPROFILE%",
+
+                "tabTitle": "Scratchpad",
+                "suppressApplicationTitle": true,
+
+                "font":
+                {
+                "face": "JetBrainsMono NFP",
+                "size": 12
+                },
+
+                "colorScheme": "Tokyo Night Scratchpad",
+
+                "padding": "8",
+                "scrollbarState": "hidden",
+
+                "opacity": 94,
+                "useAcrylic": true,
+
+                "bellStyle": "none"
+            }
+        ]
+    },
+    "schemes": 
+    [    
+        {
+        "name": "Tokyo Night Scratchpad",
+
+        "background": "#1A1B26",
+        "foreground": "#C0CAF5",
+
+        "black": "#15161E",
+        "red": "#F7768E",
+        "green": "#9ECE6A",
+        "yellow": "#E0AF68",
+        "blue": "#7AA2F7",
+        "purple": "#BB9AF7",
+        "cyan": "#7DCFFF",
+        "white": "#A9B1D6",
+
+        "brightBlack": "#414868",
+        "brightRed": "#F7768E",
+        "brightGreen": "#9ECE6A",
+        "brightYellow": "#E0AF68",
+        "brightBlue": "#7AA2F7",
+        "brightPurple": "#BB9AF7",
+        "brightCyan": "#7DCFFF",
+        "brightWhite": "#C0CAF5",
+
+        "cursorColor": "#C0CAF5",
+        "selectionBackground": "#33467C"
+        }
+    ],
+    "themes": []
+}

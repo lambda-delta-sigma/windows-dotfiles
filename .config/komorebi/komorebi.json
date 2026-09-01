@@ -33,8 +33,8 @@
           "name": "I",
           "layout": "BSP",
           "workspace_rules": [
-            { "kind": "Exe", "id": "thunderbird", "matching_strategy": "Equals" },
-            { "kind": "Exe", "id": "Discord", "matching_strategy": "Equals" }
+            { "kind": "Exe", "id": "thunderbird.exe", "matching_strategy": "Equals" },
+            { "kind": "Exe", "id": "Discord.exe", "matching_strategy": "Equals" }
           ]
         },
         {
@@ -72,6 +72,8 @@
     { "kind": "Class", "id": "Shell_TrayWnd", "matching_strategy": "Equals" },
     { "kind": "Exe", "id": "ScreenClippingHost", "matching_strategy": "Equals" },
 
+    { "kind": "Exe", "id": "WindowsTerminal.exe", "matching_strategy": "Equals" },
+
     [
       { "kind": "Exe", "id": "steamwebhelper", "matching_strategy": "Equals" },
       { "kind": "Title", "id": ".*Big Picture.*", "matching_strategy": "Regex" }
@@ -82,9 +84,10 @@
     { "kind": "Exe", "id": "(?i)deadlock", "matching_strategy": "Regex" },
     { "kind": "Exe", "id": "(?i)deadbydaylight", "matching_strategy": "Regex" },
     { "kind": "Exe", "id": "(?i).*pathofexile.*", "matching_strategy": "Regex" },
-    { "kind": "Exe", "id": "(?i).*vermintide.*", "matching_strategy": "Regex" },
+    { "kind": "Exe", "id": "[A-Za-z0-9]*vermintide[A-Za-z0-9]*.exe", "matching_strategy": "Regex" },
     { "kind": "Exe", "id": "FINAL FANTASY XI", "matching_strategy": "Equals" },
     { "kind": "Exe", "id": "FINAL FANTASY XIV", "matching_strategy": "Equals" },
+    { "kind": "Exe", "id": "ffxiv_[A-Za-z0-9]*.exe", "matching_strategy": "Regex" },
 
     [
       { "kind": "Title", "id": "[Pp]icture.in.[Pp]icture", "matching_strategy": "Regex" },
@@ -109,17 +112,20 @@
       { "kind": "Exe", "id": "Discord", "matching_strategy": "Equals" },
       { "kind": "Title", "id": "Discord Popout|Screen Share", "matching_strategy": "Regex" }
     ],
-
+    { "kind": "Exe", "id": "anki.exe", "matching_strategy": "Equals" },
     [
-      { "kind": "Exe", "id": "anki", "matching_strategy": "Equals" },
+      { "kind": "Exe", "id": "anki.exe", "matching_strategy": "Equals" },
       { "kind": "Title", "id": "Add", "matching_strategy": "Equals" }
     ],
     [
-      { "kind": "Exe", "id": "anki", "matching_strategy": "Equals" },
+      { "kind": "Exe", "id": "anki.exe", "matching_strategy": "Equals" },
       { "kind": "Title", "id": "^Browse", "matching_strategy": "Regex" }
     ],
-
-    { "kind": "Exe", "id": "XIVLauncher", "matching_strategy": "Equals" },
+    [
+      { "kind": "Exe", "id": "anki.exe", "matching_strategy": "Equals" },
+      { "kind": "Title", "id": "^Sync", "matching_strategy": "Regex" }
+    ],
+    { "kind": "Exe", "id": "XIVLauncher.exe", "matching_strategy": "Equals" },
     { "kind": "Exe", "id": "(?i)windower", "matching_strategy": "Regex" }
   ]
 }
