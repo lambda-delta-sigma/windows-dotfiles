@@ -1,3 +1,8 @@
+# Clear legacy aliases that now have function implementations. Alias expansion
+# occurs while Bash parses function declarations, so this is required for a
+# safe `source ~/.bashrc` migration and reload.
+unalias du myip gitb cfb cfv cfs cfy cfyk 2>/dev/null || true
+
 # System commands. sdn and rbn act immediately and intentionally.
 alias sdn='shutdown /s /t 0'
 alias rbn='shutdown /r /t 0'
